@@ -76,7 +76,7 @@ PrintWriter out_add_answers = new PrintWriter(new BufferedWriter(new FileWriter(
 	    	    out_add2.close();
 	    	    out_add2_answers.close();
 	    	    
-	  // Single digit Subtractions with answers
+	  // Single digit Subtractions with answers -------
 	  PrintWriter out_sub = new PrintWriter(new BufferedWriter(new FileWriter("\\" + f +"\\Subtract_Single_Digit.txt", true)));
 	  PrintWriter out_sub_answers = new PrintWriter(new BufferedWriter(new FileWriter("\\" + f +"\\Answer_sheet.txt", true)));  	    
 	    Random sub1 = new Random();
