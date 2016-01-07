@@ -47,7 +47,7 @@ PrintWriter out_add_answers = new PrintWriter(new BufferedWriter(new FileWriter(
 
 	    
 	    
-	  //Double Digit Additions with answers	
+	  //Double Digit Additions with answers	////////
 	    PrintWriter out_add2 = new PrintWriter(new BufferedWriter(new FileWriter("\\" + f +"\\Addition_Double_Digit.txt", true)));
 	    PrintWriter out_add2_answers = new PrintWriter(new BufferedWriter(new FileWriter("\\" + f +"\\Answer_sheet.txt", true)));	    
 	    	    Random add12 = new Random();
