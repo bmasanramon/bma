@@ -20,7 +20,7 @@ public class BMAWorksheets {
 		f.mkdir();
 		
 		
-	//Single Digit Additions with answers.......	
+	//Single Digit Additions with answers	
 PrintWriter out_add = new PrintWriter(new BufferedWriter(new FileWriter("\\" + f +"\\Addition_Single_Digit.txt", true)));
 PrintWriter out_add_answers = new PrintWriter(new BufferedWriter(new FileWriter("\\" + f +"\\Answer_sheet.txt", true)));	    
 	    Random add1 = new Random();
@@ -38,7 +38,7 @@ PrintWriter out_add_answers = new PrintWriter(new BufferedWriter(new FileWriter(
 	      System.out.println();
 	      out_add.println( idx + ".   "+ addnum1  + " + " + addnum2 );
 	      out_add.println();
-	      out_add_answers.print(addnum_result + "\t");
+	      out_add_answers.print(idx + ")"+addnum_result + "\t");
 	      
 	     
 	    }
@@ -47,7 +47,7 @@ PrintWriter out_add_answers = new PrintWriter(new BufferedWriter(new FileWriter(
 
 	    
 	    
-	  //Double Digit Additions with answers	////////
+	  //Double Digit Additions with answers	
 	    PrintWriter out_add2 = new PrintWriter(new BufferedWriter(new FileWriter("\\" + f +"\\Addition_Double_Digit.txt", true)));
 	    PrintWriter out_add2_answers = new PrintWriter(new BufferedWriter(new FileWriter("\\" + f +"\\Answer_sheet.txt", true)));	    
 	    	    Random add12 = new Random();
@@ -69,14 +69,14 @@ PrintWriter out_add_answers = new PrintWriter(new BufferedWriter(new FileWriter(
 	    	      System.out.println();
 	    	      out_add2.println( idx + ".   "+ addnum12  + " + " + addnum22 );
 	    	      out_add2.println();
-	    	      out_add2_answers.print(addnum_result_double + "\t");
+	    	      out_add2_answers.print(idx + ")"+addnum_result_double + "\t");
 	    	      
 	    	     
 	    	    }
 	    	    out_add2.close();
 	    	    out_add2_answers.close();
 	    	    
-	  // Single digit Subtractions with answers -------
+	  // Single digit Subtractions with answers
 	  PrintWriter out_sub = new PrintWriter(new BufferedWriter(new FileWriter("\\" + f +"\\Subtract_Single_Digit.txt", true)));
 	  PrintWriter out_sub_answers = new PrintWriter(new BufferedWriter(new FileWriter("\\" + f +"\\Answer_sheet.txt", true)));  	    
 	    Random sub1 = new Random();
@@ -106,7 +106,7 @@ PrintWriter out_add_answers = new PrintWriter(new BufferedWriter(new FileWriter(
 	      System.out.println();
 	      out_sub.println( idx + ".   "+ subnum1  + " - " + subnum2 );
 	      out_sub.println();
-	      out_sub_answers.print(sub_answers + "\t");
+	      out_sub_answers.print(idx + ")"+sub_answers + "\t");
 	      //out_sub_answers.println();
 	     
 	    }
@@ -145,7 +145,7 @@ PrintWriter out_add_answers = new PrintWriter(new BufferedWriter(new FileWriter(
 		      System.out.println();
 		      out_sub2.println( idx + ".   "+ subnum12  + " - " + subnum22 );
 		      out_sub2.println();
-		      out_sub2_answers.print(sub2_answers + "\t");
+		      out_sub2_answers.print(idx + ")"+sub2_answers + "\t");
 		      //out_sub2_answers.println();
 		     
 		    }
@@ -174,7 +174,7 @@ PrintWriter out_add_answers = new PrintWriter(new BufferedWriter(new FileWriter(
 	      System.out.println();
 	      out.println( idx + ".   "+ num1  + " X " + num2 );
 	      out.println();
-	      out_answers.print(ans + "\t");
+	      out_answers.print(idx + ")"+ans + "\t");
 	      //out_answers.println();
 	     
 	    }
@@ -202,7 +202,7 @@ PrintWriter out_mul_double_answers = new PrintWriter(new BufferedWriter(new File
 	      System.out.println();
 	      out_mul_double.println( idx + ".   "+ num1_1  + " X " + num2_2 );
 	      out_mul_double.println();
-	      out_mul_double_answers.print(ans_num + "\t\t");
+	      out_mul_double_answers.print(idx + ")"+ans_num + "\t\t");
 	      //out_mul_double_answers.println();
 	     
 	    }
@@ -230,7 +230,7 @@ PrintWriter out_mult_answers = new PrintWriter(new BufferedWriter(new FileWriter
 	      System.out.println();
 	      out_mult.println( idx + ".   "+ num1s  + " X " + num2s );
 	      out_mult.println();
-	      out_mult_answers.print(mul_ans + "\t");
+	      out_mult_answers.print(idx + ")"+mul_ans + "\t");
 	      //out_mult_answers.println();
 	      
 	     
@@ -247,35 +247,33 @@ PrintWriter out_mult_answers = new PrintWriter(new BufferedWriter(new FileWriter
 	    Random randomDividend = new Random();
 	    int div1;
 	    int div2;
-	    int temp = 0;
+	    int idx=0;
 	    float div_ans;
 	    System.out.println();
 	    System.out.println("Divide these two numbers :" );
 	    System.out.println();
 	    out2_answers.println();
 	    out2_answers.println();
-	    out2_answers.println("div-single");
+	    out2_answers.println(idx + ")"+"div-single");
 
         
 	    
-	    for (int idx = 1; idx <= 100; ++idx){
-	       div1 = randomDivisor.nextInt(100);
-	       div2 = randomDividend.nextInt(10);
-	       if (div1 == 0) div1 = 3;
-	       if (div2 == 0) div2 = 2;
-	       if (div1<div2){
-	    	   temp = div1;
-	    	   div1 = div2;
-	    	   div2 = temp;
-	       }
-	       
-          System.out.println( idx + div1+ " " + new String(Character.toChars(0x00F7)) + " " + div2 );
-          div_ans = div1 / div2;
+	    for ( idx = 1; idx <= 100; ++idx){
+	       div1 = randomDivisor.nextInt(100)+2;
+	       div2 = randomDividend.nextInt(10)+2;
+	      
+	    
+          System.out.println(  div1+ " " + new String(Character.toChars(0x00F7)) + " " + div2 );
+	       //System.out.println( idx + div1+ " "  + " " + div2 );
+          div_ans = (float)div1/div2;
+          
+
           System.out.println();
-	      out2.println( idx + div1+ " " + new String(Character.toChars(0x00F7)) + " " + div2 );
+	      out2.println( idx + ":"+" "+ div1+ " " + new String(Character.toChars(0x00F7)) + " " + div2 );
+	      //out2.println( idx + div1+ " " + " " + div2 );
 	      out2.println();
-	      out2_answers.print(div_ans + "\t");
-	     // out2_answers.println();
+	      out2_answers.print(idx + ")"+div_ans + "\t");
+	      
 	     
 	    }
 	    out2.close();
